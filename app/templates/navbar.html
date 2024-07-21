@@ -1,5 +1,5 @@
 <a href="{% url 'home' %}">
-    LOGO
+    HOME
 </a>
 <div>
     <form action="{% url 'home' %}" method="GET">
@@ -7,10 +7,10 @@
     </form>
 
     <!-- if user is loged in then show logout option else login optino -->
-     {% if request.user.is_authenticated %}
-     <p>Hello {{ request.user }}</p>
-     <a href="{% url 'logout' %}">Logout</a>
-     {% else %}
+    {% if request.user.is_authenticated %}
+    <p>Hello {{ request.user }}</p>
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
     <a href="{% url 'login' %}">Login</a>
     {% endif %}
 </div>
